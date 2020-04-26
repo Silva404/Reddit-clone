@@ -34,13 +34,12 @@ body {
   gap: 20px;
 }
 
-ul {
-  list-style: none;
-}
-
 .content {
   max-width: 1000px;
   margin: 0 auto; 
+}
+ul {
+  list-style: none;
 }
 
 header { 
