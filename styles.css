@@ -1,7 +1,65 @@
+* {
+  margin: 0; 
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
 html {
-  font-size: 62,5%;
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: 'SourceSans';
+  src: url('fonts/SourceSansPro.ttf')
+}
+
+html,
+body {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  height: 100vh;
+  font-family: "SourceSans";
 }
 
 body {
-  font-size: ;
+  font-size: 1.6rem;
+}
+
+.grid {
+  max-width: 1000px;
+  
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: minmax();
+  gap: 20px;
+}
+
+header { 
+  grid-column: 1/13;
+  grid-row: 1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  grid-column: 1/13;
+  display: flex;  
+}
+
+nav ul {
+  display: flex;
+}
+
+section { 
+  grid-column: 1/9;
+}
+
+aside {
+  grid-column: 9/13;
+
 }
