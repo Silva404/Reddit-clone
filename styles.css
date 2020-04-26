@@ -24,26 +24,39 @@ body {
 
 body {
   font-size: 1.6rem;
+  background: #EFF2F5;
 }
 
 .grid {
-  max-width: 1000px;
-  
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12,1fr);
   grid-template-rows: minmax();
   gap: 20px;
 }
 
-header { 
-  grid-column: 1/13;
-  grid-row: 1;
+ul {
+  list-style: none;
 }
 
-header {
+.content {
+  max-width: 1000px;
+  margin: 0 auto; 
+}
+
+header { 
+  grid-column: 1/13;
+  background: #fff;
+
   display: flex;
   justify-content: space-between;
+}
+
+header .logofunctions {
+  display: flex;
+}
+
+header .userfunctions .userlogo {
+  display: flex;
 }
 
 nav {
@@ -61,5 +74,4 @@ section {
 
 aside {
   grid-column: 9/13;
-
 }
