@@ -63,8 +63,8 @@ header .userfunctions .userlogo {
   grid-column: 1/13;
   height: 200px;
   width: 100%;  
-  background: url(Images/background.jpg) no-repeat;
-  background-size: ;
+  background: url(Images/background.jpg) no-repeat 0px -50px;
+  background-size: cover;
 }
 
 nav {
@@ -78,10 +78,36 @@ nav ul {
   display: flex;
 }
 
+.trending {
+  grid-column: 1/13;
+  width: 100%; 
+}
 
+/* .blocks {
+  display: flex;
+} */
 
+.trend {
+  background: #EFF2F5;
+  height: 50px;
+  grid-column: minmax(150px, 1fr);
+}
 
+.one {
+  background: #000;
+}
 
+.two {
+  background: #213;
+}
+
+.three {
+  background: rgb(36, 63, 14);
+}
+
+.four {
+  background: rgb(15, 37, 97);
+}
 section,
 aside {
   margin-top: 20px;
