@@ -86,7 +86,7 @@ nav ul {
 
 .trending {
   grid-column: 1/13;
-  width: 57%;
+  width: 100%;
 }
 
 .blocks {
@@ -145,6 +145,39 @@ aside > *:not(:first-child){
 
 /* =========================
 RESPONSIVE  */
+
+@media screen and (max-width: 963px) {
+  .grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .one {
+    background: #000;
+    grid-column: 1/ span 3;
+  }
+  
+  .two {
+    background: #213;
+    grid-column: 4 / span 3;
+  }
+  
+  .three {
+    background: rgb(36, 63, 14);
+    grid-column: 7 / span 3;
+  }
+  .trending {
+   margin: 0 40px;
+   /* width: auto; */
+  }
+  section { 
+    grid-column: 1 / span 8
+    padding: 0 25px;        
+  }
+  aside {
+    grid-column: 9 / span 4;
+  }
+}
+
+
 
 @media screen and (max-width: 959px) {
   aside {
