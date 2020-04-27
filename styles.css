@@ -24,7 +24,7 @@ body {
 
 body {
   font-size: 1.6rem;
-  background: #EFF2F5;
+  background: #DBE0E6;
 }
 
 .grid {
@@ -86,7 +86,7 @@ nav ul {
 
 .trending {
   grid-column: 1/13;
-  width: 77%;
+  width: 57%;
 }
 
 .blocks {
@@ -95,7 +95,7 @@ nav ul {
 }
 .trend {
   margin: 10px 0;
-  height: 200px;
+  height: 170px;
   border-radius: 10px;
 } 
 
@@ -122,11 +122,11 @@ nav ul {
 section,
 aside {
   margin-top: 20px;
-  padding: 0 10px;
 }
 
 section { 
   grid-column: 1/9;
+  padding: 0 10px 0 30px; 
 }
 
 section > *:not(:first-child){
@@ -135,22 +135,23 @@ section > *:not(:first-child){
 
 aside {
   grid-column: 9/13;
+
+  padding: 30px 30px 0 10px; 
 }
 
 aside > *:not(:first-child){
   margin-top: 10px;
 }
 
+/* =========================
+RESPONSIVE  */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 959px) {
   aside {
     display: none;
   }  
   .grid {
-    grid-template-columns: repeat(9, 1fr);
-  }
-  .four {
-    display: none;
+    grid-template-columns: repeat(12, 1fr);
   }
   .one {
     background: #000;
@@ -166,14 +167,132 @@ aside > *:not(:first-child){
     background: rgb(36, 63, 14);
     grid-column: 7 / span 3;
   }
-  .blocks {
-   gap: 15px;
-   
-  }
   .trending {
    margin: 0 40px;
    width: auto;
   }
+  section { 
+    grid-column: 1 / span 12;
+    padding: 0 25px;        
+  }
+}
+
+
+
+@media screen and (max-width: 945px) {
+  aside {
+    display: none;
+  }  
+  .grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .one {
+    grid-column: 1/ span 4;
+  }
+  
+  .two {
+    grid-column: 5 / span 4;
+  }
+  
+  .three {
+    grid-column: 9 / span 4;
+  }
+  .four {
+    display: none;
+  }
+  .trending {
+   margin: 0 35px;
+  }
+  section { 
+    grid-column: 1 / span 12;
+    padding: 0 25px;        
+  }
+}
+
+
+
+@media screen and (max-width: 768px) { 
+  .grid {
+    grid-template-columns: repeat(9, 1fr);
+  }
+  .one {
+    grid-column: 1/ span 3;
+  }
+  
+  .two {
+    grid-column: 4 / span 3;
+  }
+  
+  .three {
+    grid-column: 7 / span 3;
+  }
+  .four {
+    display: none;
+  } 
+  .trending {
+   margin: 0 35px;
+  }
+
+  section { 
+    grid-column: 1 / span 9;
+    padding: 0 25px;        
+  }
+}
+
+@media screen and (max-width: 727px) { 
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .one {
+    grid-column: 1/ span 2;
+  }
+  
+  .two {
+    grid-column: 3 / span 2;
+  }
+  
+  .three,
+  .four {
+    display: none;
+  } 
+  .trending {
+   margin: 0 35px;
+  }
+
+  section { 
+    grid-column: 1 / span 4;
+    padding: 0 25px;        
+  }
+}
+
+@media screen and (max-width: 637px) {  
+  section { 
+    padding: 0;       
+  }
+}
+
+@media screen and (max-width: 506px) {
+  .one {
+    grid-column: 1/ span 4;
+  }  
+  .two {
+    display: none;
+  }
+  .trending {
+    margin: 0 45px;
+   }
+}
+
+@media screen and (max-width: 375px) {
+  .one {
+    grid-column: 1/ span 4;
+  }  
+  .two {
+    display: none;
+  }
+  .trending {
+    margin: 0 40px;
+   }
 }
 
 /* quando eu trocar meu layout de 12 colunas pra 8, vai haver uma quebra automática de 4 quadros pra 2 por linha, imagino.
