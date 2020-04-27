@@ -86,7 +86,7 @@ nav ul {
 
 .trending {
   grid-column: 1/13;
-  width: 100%; 
+  width: 77%;
 }
 
 .blocks {
@@ -172,6 +172,7 @@ aside > *:not(:first-child){
   }
   .trending {
    margin: 0 40px;
+   width: auto;
   }
 }
 
