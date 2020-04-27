@@ -65,13 +65,13 @@ header .userfunctions .userlogo {
   display: flex;
 }
 
-.hero {
+/* .hero {
   grid-column: 1/13;
   height: 200px;
   width: 100%;  
   background: url(Images/background.jpg) no-repeat 0px -50px;
   background-size: cover;
-}
+} */
 
 nav {
   grid-column: 1/13;
@@ -102,13 +102,11 @@ nav ul {
 .one {
   background: #000;
   grid-column: 1/ span 3;
-  width: 100%;
 }
 
 .two {
   background: #213;
   grid-column: 4 / span 3;
-  width: 100%;
 }
 
 .three {
@@ -119,7 +117,6 @@ nav ul {
 .four {
   background: rgb(15, 37, 97);
   grid-column: 10 / span 3;
-  width: 100%;
 }
 
 section,
@@ -143,3 +140,43 @@ aside {
 aside > *:not(:first-child){
   margin-top: 10px;
 }
+
+
+@media screen and (max-width: 768px) {
+  aside {
+    display: none;
+  }  
+  .grid {
+    grid-template-columns: repeat(9, 1fr);
+  }
+  .four {
+    display: none;
+  }
+  .one {
+    background: #000;
+    grid-column: 1/ span 3;
+  }
+  
+  .two {
+    background: #213;
+    grid-column: 4 / span 3;
+  }
+  
+  .three {
+    background: rgb(36, 63, 14);
+    grid-column: 7 / span 3;
+  }
+  .blocks {
+   gap: 15px;
+   
+  }
+  .trending {
+   margin: 0 40px;
+  }
+}
+
+/* quando eu trocar meu layout de 12 colunas pra 8, vai haver uma quebra automática de 4 quadros pra 2 por linha, imagino.
+mas eu vou retirar um então deve encaixar
+e ir retirando de acordo como vou reduzindo a resolução até ficar só um no menor tamanho
+
+community e filter vão sumir a partir da primeira quebra de 768px */
