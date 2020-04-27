@@ -43,6 +43,12 @@ ul {
   list-style: none;
 }
 
+.box {
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+}
+
 header { 
   grid-column: 1/13;
   background: #fff;
@@ -83,31 +89,39 @@ nav ul {
   width: 100%; 
 }
 
-/* .blocks {
-  display: flex;
-} */
-
-.trend {
-  background: #EFF2F5;
-  height: 50px;
-  grid-column: minmax(150px, 1fr);
+.blocks {
+  grid-column: 1/13;
+  gap: 10px;
 }
+.trend {
+  margin: 10px 0;
+  height: 200px;
+  border-radius: 10px;
+} 
 
 .one {
   background: #000;
+  grid-column: 1/ span 3;
+  width: 100%;
 }
 
 .two {
   background: #213;
+  grid-column: 4 / span 3;
+  width: 100%;
 }
 
 .three {
   background: rgb(36, 63, 14);
+  grid-column: 7 / span 3;
 }
 
 .four {
   background: rgb(15, 37, 97);
+  grid-column: 10 / span 3;
+  width: 100%;
 }
+
 section,
 aside {
   margin-top: 20px;
@@ -120,7 +134,6 @@ section {
 
 section > *:not(:first-child){
   margin-top: 10px;
-  background: rgb(255, 255, 255);
 }
 
 aside {
